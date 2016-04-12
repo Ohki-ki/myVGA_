@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/myClockManager.vhd"
+vhdl work "myVGA_.vhd"

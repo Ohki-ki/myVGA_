@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ladyo\Documents\Xilinx\myVGA_\myVGA.ncd
+OUTFILE=C:\Users\ladyo\Documents\Xilinx\myVGA_\myVGA.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=C:\Users\ladyo\Documents\Xilinx\myVGA_
+LICENSE=WebPack
+USER_INFO=211080844_0_0_530

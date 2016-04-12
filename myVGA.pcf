@@ -1,0 +1,84 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Apr 11 17:01:54 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+PROHIBIT = SITE "P38";
+PROHIBIT = SITE "P39";
+PROHIBIT = SITE "P60";
+PROHIBIT = SITE "P64";
+PROHIBIT = SITE "P65";
+PROHIBIT = SITE "P69";
+PROHIBIT = SITE "P70";
+PROHIBIT = SITE "P74";
+PROHIBIT = SITE "P144";
+COMP "reset_l" LOCATE = SITE "P78" LEVEL 1;
+COMP "d<7>" LOCATE = SITE "P142" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "P10" LEVEL 1;
+COMP "wr_l" LOCATE = SITE "P101" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "P9" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "clk" LOCATE = SITE "P84" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "vs" LOCATE = SITE "P35" LEVEL 1;
+COMP "siwua" LOCATE = SITE "P80" LEVEL 1;
+COMP "rxf_l" LOCATE = SITE "P99" LEVEL 1;
+COMP "oe_l" LOCATE = SITE "P100" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "P6" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "P5" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "P2" LEVEL 1;
+COMP "rd_l" LOCATE = SITE "P98" LEVEL 1;
+COMP "txe_l" LOCATE = SITE "P102" LEVEL 1;
+COMP "d<0>" LOCATE = SITE "P116" LEVEL 1;
+COMP "d<1>" LOCATE = SITE "P117" LEVEL 1;
+COMP "d<2>" LOCATE = SITE "P118" LEVEL 1;
+COMP "d<3>" LOCATE = SITE "P121" LEVEL 1;
+COMP "hs" LOCATE = SITE "P33" LEVEL 1;
+COMP "d<4>" LOCATE = SITE "P137" LEVEL 1;
+COMP "d<5>" LOCATE = SITE "P138" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "P12" LEVEL 1;
+COMP "d<6>" LOCATE = SITE "P141" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "P11" LEVEL 1;
+TIMEGRP vgaclk = BEL "g_0" BEL "g_1" BEL "g_2" BEL "r_0" BEL "r_1" BEL "r_2"
+        BEL "b_0" BEL "b_1" BEL "b_2" BEL "hs" BEL "vs" BEL "hCount_0" BEL
+        "hCount_1" BEL "hCount_2" BEL "hCount_3" BEL "hCount_4" BEL "hCount_5"
+        BEL "hCount_6" BEL "hCount_7" BEL "hCount_8" BEL "hCount_9" BEL
+        "vCount_0" BEL "vCount_1" BEL "vCount_2" BEL "vCount_3" BEL "vCount_4"
+        BEL "vCount_5" BEL "vCount_6" BEL "vCount_7" BEL "vCount_8" BEL
+        "vCount_9";
+TIMEGRP clockManager_clkfx = BEL "g_0" BEL "g_1" BEL "g_2" BEL "r_0" BEL "r_1"
+        BEL "r_2" BEL "b_0" BEL "b_1" BEL "b_2" BEL "hs" BEL "vs" BEL
+        "hCount_0" BEL "hCount_1" BEL "hCount_2" BEL "hCount_3" BEL "hCount_4"
+        BEL "hCount_5" BEL "hCount_6" BEL "hCount_7" BEL "hCount_8" BEL
+        "hCount_9" BEL "clockManager/clkout2_buf" BEL "vCount_0" BEL
+        "vCount_1" BEL "vCount_2" BEL "vCount_3" BEL "vCount_4" BEL "vCount_5"
+        BEL "vCount_6" BEL "vCount_7" BEL "vCount_8" BEL "vCount_9";
+PIN SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1> = BEL
+        "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1" PINNAME O;
+PIN clockManager/dcm_sp_inst_pins<1> = BEL "clockManager/dcm_sp_inst" PINNAME
+        CLKFB;
+TIMEGRP clockManager_clk0 = BEL "dInternal_0" BEL "dInternal_1" BEL
+        "dInternal_2" BEL "dInternal_3" BEL "dInternal_4" BEL "dInternal_5"
+        BEL "dInternal_6" BEL "dInternal_7" BEL "state_FSM_FFd8" BEL
+        "state_FSM_FFd9" BEL "state_FSM_FFd5" BEL "state_FSM_FFd6" BEL
+        "state_FSM_FFd3" BEL "state_FSM_FFd2" BEL "state_FSM_FFd1" BEL "rd_l"
+        BEL "wr_l" BEL "state_FSM_FFd7" BEL "state_FSM_FFd4" BEL "oe_l" BEL
+        "clockManager/clkout1_buf" PIN
+        "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1>" PIN
+        "clockManager/dcm_sp_inst_pins<1>";
+TIMEGRP myinputs = BEL "d<7>" BEL "d<6>" BEL "d<5>" BEL "d<4>" BEL "d<3>" BEL
+        "d<2>" BEL "d<1>" BEL "d<0>" BEL "reset_l" BEL "rxf_l" BEL "txe_l";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN clockManager/dcm_sp_inst_pins<3> = BEL "clockManager/dcm_sp_inst" PINNAME
+        CLKIN;
+TIMEGRP clk = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "clockManager/dcm_sp_inst_pins<3>";
+TS_1 = PERIOD TIMEGRP "clk" 16.666 ns HIGH 50%;
+TS_2 = PERIOD TIMEGRP "vgaclk" 40 ns HIGH 50%;
+TS_clockManager_clkfx = PERIOD TIMEGRP "clockManager_clkfx" TS_1 / 0.416666667
+        HIGH 50%;
+TS_clockManager_clk0 = PERIOD TIMEGRP "clockManager_clk0" TS_1 HIGH 50%;
+TIMEGRP "myinputs" OFFSET = IN 9 ns VALID 9.5 ns BEFORE COMP "clk";
+SCHEMATIC END;
+

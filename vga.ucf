@@ -1,0 +1,134 @@
+#Created by Constraints Editor (xc3s500e-fg320-4) - 2011/02/04
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_1 = PERIOD "clk" 16.666 ns HIGH 50 %;
+
+#Created by Constraints Editor (xc3s500e-fg320-4) - 2011/02/07
+#OFFSET = OUT 5.667 ns AFTER "clk";
+
+NET "vgaclk" TNM_NET = "vgaclk";
+TIMESPEC TS_2 = PERIOD "vgaclk" 40 ns HIGH 50 %;
+
+CONFIG PROHIBIT = P38;
+CONFIG PROHIBIT = P39;
+CONFIG PROHIBIT = P60;
+CONFIG PROHIBIT = P64;
+CONFIG PROHIBIT = P65;
+CONFIG PROHIBIT = P69;
+CONFIG PROHIBIT = P70;
+CONFIG PROHIBIT = P74;
+CONFIG PROHIBIT = P144;
+
+NET "d[0]" LOC = P116;
+NET "d[1]" LOC = P117;
+NET "d[2]" LOC = P118;
+NET "d[3]" LOC = P121;
+NET "d[4]" LOC = P137;
+NET "d[5]" LOC = P138;
+NET "d[6]" LOC = P141;
+NET "d[7]" LOC = P142;
+
+NET "siwua" LOC = P80;
+NET "txe_l" LOC = P102;
+NET "wr_l" LOC = P101;
+NET "reset_l" LOC = P78;
+NET "oe_l" LOC = P100;
+NET "rd_l" LOC = P98;
+NET "rxf_l" LOC = P99;
+
+NET "b[2]" LOC = P2;
+NET "b[1]" LOC = P5;
+NET "b[0]" LOC = P6;
+NET "g[2]" LOC = P7;
+NET "g[1]" LOC = P8;
+NET "g[0]" LOC = P9;
+NET "r[2]" LOC = P10;
+NET "r[1]" LOC = P11;
+NET "r[0]" LOC = P12;
+NET "hs" LOC = P33;
+NET "vs" LOC = P35;
+
+NET "clk" LOC = P84;
+
+INST "d[0]" TNM = "myinputs";
+INST "d[1]" TNM = "myinputs";
+INST "d[2]" TNM = "myinputs";
+INST "d[3]" TNM = "myinputs";
+INST "d[4]" TNM = "myinputs";
+INST "d[5]" TNM = "myinputs";
+INST "d[6]" TNM = "myinputs";
+INST "d[7]" TNM = "myinputs";
+INST "reset_l" TNM = "myinputs";
+INST "rxf_l" TNM = "myinputs";
+INST "txe_l" TNM = "myinputs";
+
+TIMEGRP "myinputs" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk";
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "d[0]" IOSTANDARD = LVCMOS33;
+NET "d[1]" IOSTANDARD = LVCMOS33;
+NET "d[2]" IOSTANDARD = LVCMOS33;
+NET "d[3]" IOSTANDARD = LVCMOS33;
+NET "d[4]" IOSTANDARD = LVCMOS33;
+NET "d[5]" IOSTANDARD = LVCMOS33;
+NET "d[6]" IOSTANDARD = LVCMOS33;
+NET "d[7]" IOSTANDARD = LVCMOS33;
+
+NET "siwua" IOSTANDARD = LVCMOS33;
+NET "txe_l" IOSTANDARD = LVCMOS33;
+NET "wr_l" IOSTANDARD = LVCMOS33;
+NET "reset_l" IOSTANDARD = LVCMOS33;
+NET "oe_l" IOSTANDARD = LVCMOS33;
+NET "rd_l" IOSTANDARD = LVCMOS33;
+NET "rxf_l" IOSTANDARD = LVCMOS33;
+
+NET "b[2]" IOSTANDARD = LVCMOS33;
+NET "b[1]" IOSTANDARD = LVCMOS33;
+NET "b[0]" IOSTANDARD = LVCMOS33;
+NET "g[2]" IOSTANDARD = LVCMOS33;
+NET "g[1]" IOSTANDARD = LVCMOS33;
+NET "g[0]" IOSTANDARD = LVCMOS33;
+NET "r[2]" IOSTANDARD = LVCMOS33;
+NET "r[1]" IOSTANDARD = LVCMOS33;
+NET "r[0]" IOSTANDARD = LVCMOS33;
+NET "hs" IOSTANDARD = LVCMOS33;
+NET "vs" IOSTANDARD = LVCMOS33;
+
+NET "d[0]" SLEW = FAST;
+NET "d[1]" SLEW = FAST;
+NET "d[2]" SLEW = FAST;
+NET "d[3]" SLEW = FAST;
+NET "d[4]" SLEW = FAST;
+NET "d[5]" SLEW = FAST;
+NET "d[6]" SLEW = FAST;
+NET "d[7]" SLEW = FAST;
+NET "siwua" SLEW = FAST;
+NET "wr_l" SLEW = FAST;
+NET "oe_l" SLEW = FAST;
+NET "rd_l" SLEW = FAST;
+
+NET "reset_l" PULLDOWN;
+
+NET "r[2]" DRIVE = 8;
+NET "r[2]" SLEW = FAST;
+NET "r[1]" DRIVE = 8;
+NET "r[1]" SLEW = FAST;
+NET "r[0]" DRIVE = 8;
+NET "r[0]" SLEW = FAST;
+NET "g[2]" DRIVE = 8;
+NET "g[2]" SLEW = FAST;
+NET "g[1]" DRIVE = 8;
+NET "g[1]" SLEW = FAST;
+NET "g[0]" DRIVE = 8;
+NET "g[0]" SLEW = FAST;
+NET "b[2]" DRIVE = 8;
+NET "b[2]" SLEW = FAST;
+NET "b[1]" DRIVE = 8;
+NET "b[1]" SLEW = FAST;
+NET "b[0]" DRIVE = 8;
+NET "b[0]" SLEW = FAST;
+NET "hs" DRIVE = 8;
+NET "hs" SLEW = FAST;
+NET "vs" DRIVE = 8;
+NET "vs" SLEW = FAST;
+
+

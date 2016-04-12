@@ -1,0 +1,2 @@
+vhdl work ../../myClockerManager.vhd
+vhdl work ../example_design/myClockerManager_exdes.vhd
