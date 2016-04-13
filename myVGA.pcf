@@ -1,16 +1,16 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Apr 11 17:01:54 2016
+// Written by: Map P.20131013 on Tue Apr 12 17:38:32 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-PROHIBIT = SITE "P38";
-PROHIBIT = SITE "P39";
-PROHIBIT = SITE "P60";
-PROHIBIT = SITE "P64";
 PROHIBIT = SITE "P65";
-PROHIBIT = SITE "P69";
+PROHIBIT = SITE "P39";
 PROHIBIT = SITE "P70";
+PROHIBIT = SITE "P64";
+PROHIBIT = SITE "P60";
 PROHIBIT = SITE "P74";
+PROHIBIT = SITE "P38";
+PROHIBIT = SITE "P69";
 PROHIBIT = SITE "P144";
 COMP "reset_l" LOCATE = SITE "P78" LEVEL 1;
 COMP "d<7>" LOCATE = SITE "P142" LEVEL 1;
@@ -39,7 +39,7 @@ COMP "d<5>" LOCATE = SITE "P138" LEVEL 1;
 COMP "r<0>" LOCATE = SITE "P12" LEVEL 1;
 COMP "d<6>" LOCATE = SITE "P141" LEVEL 1;
 COMP "r<1>" LOCATE = SITE "P11" LEVEL 1;
-TIMEGRP vgaclk = BEL "g_0" BEL "g_1" BEL "g_2" BEL "r_0" BEL "r_1" BEL "r_2"
+TIMEGRP vgaClk = BEL "g_0" BEL "g_1" BEL "g_2" BEL "r_0" BEL "r_1" BEL "r_2"
         BEL "b_0" BEL "b_1" BEL "b_2" BEL "hs" BEL "vs" BEL "hCount_0" BEL
         "hCount_1" BEL "hCount_2" BEL "hCount_3" BEL "hCount_4" BEL "hCount_5"
         BEL "hCount_6" BEL "hCount_7" BEL "hCount_8" BEL "hCount_9" BEL
@@ -66,8 +66,6 @@ TIMEGRP clockManager_clk0 = BEL "dInternal_0" BEL "dInternal_1" BEL
         "clockManager/clkout1_buf" PIN
         "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1>" PIN
         "clockManager/dcm_sp_inst_pins<1>";
-TIMEGRP myinputs = BEL "d<7>" BEL "d<6>" BEL "d<5>" BEL "d<4>" BEL "d<3>" BEL
-        "d<2>" BEL "d<1>" BEL "d<0>" BEL "reset_l" BEL "rxf_l" BEL "txe_l";
 PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
         PINNAME DIVCLK;
 PIN clockManager/dcm_sp_inst_pins<3> = BEL "clockManager/dcm_sp_inst" PINNAME
@@ -75,10 +73,11 @@ PIN clockManager/dcm_sp_inst_pins<3> = BEL "clockManager/dcm_sp_inst" PINNAME
 TIMEGRP clk = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
         "clockManager/dcm_sp_inst_pins<3>";
 TS_1 = PERIOD TIMEGRP "clk" 16.666 ns HIGH 50%;
-TS_2 = PERIOD TIMEGRP "vgaclk" 40 ns HIGH 50%;
+TS_2 = PERIOD TIMEGRP "vgaClk" 40 ns HIGH 50%;
+TS_clockManager_clk0 = PERIOD TIMEGRP "clockManager_clk0" TS_1 HIGH 50%;
 TS_clockManager_clkfx = PERIOD TIMEGRP "clockManager_clkfx" TS_1 / 0.416666667
         HIGH 50%;
-TS_clockManager_clk0 = PERIOD TIMEGRP "clockManager_clk0" TS_1 HIGH 50%;
-TIMEGRP "myinputs" OFFSET = IN 9 ns VALID 9.5 ns BEFORE COMP "clk";
+OFFSET = OUT 5.667 ns AFTER COMP "clk";
+OFFSET = IN 9 ns VALID 9.5 ns BEFORE COMP "clk";
 SCHEMATIC END;
 

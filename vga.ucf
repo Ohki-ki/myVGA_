@@ -3,7 +3,7 @@ NET "clk" TNM_NET = "clk";
 TIMESPEC TS_1 = PERIOD "clk" 16.666 ns HIGH 50 %;
 
 #Created by Constraints Editor (xc3s500e-fg320-4) - 2011/02/07
-#OFFSET = OUT 5.667 ns AFTER "clk";
+OFFSET = OUT 5.667 ns AFTER "clk";
 
 NET "vgaclk" TNM_NET = "vgaclk";
 TIMESPEC TS_2 = PERIOD "vgaclk" 40 ns HIGH 50 %;
@@ -108,27 +108,27 @@ NET "rd_l" SLEW = FAST;
 
 NET "reset_l" PULLDOWN;
 
-NET "r[2]" DRIVE = 8;
+NET "r[2]" DRIVE = 12;
 NET "r[2]" SLEW = FAST;
-NET "r[1]" DRIVE = 8;
+NET "r[1]" DRIVE = 12;
 NET "r[1]" SLEW = FAST;
-NET "r[0]" DRIVE = 8;
+NET "r[0]" DRIVE = 12;
 NET "r[0]" SLEW = FAST;
-NET "g[2]" DRIVE = 8;
+NET "g[2]" DRIVE = 12;
 NET "g[2]" SLEW = FAST;
-NET "g[1]" DRIVE = 8;
+NET "g[1]" DRIVE = 12;
 NET "g[1]" SLEW = FAST;
-NET "g[0]" DRIVE = 8;
+NET "g[0]" DRIVE = 12;
 NET "g[0]" SLEW = FAST;
-NET "b[2]" DRIVE = 8;
+NET "b[2]" DRIVE = 12;
 NET "b[2]" SLEW = FAST;
-NET "b[1]" DRIVE = 8;
+NET "b[1]" DRIVE = 12;
 NET "b[1]" SLEW = FAST;
-NET "b[0]" DRIVE = 8;
+NET "b[0]" DRIVE = 12;
 NET "b[0]" SLEW = FAST;
-NET "hs" DRIVE = 8;
+NET "hs" DRIVE = 12;
 NET "hs" SLEW = FAST;
-NET "vs" DRIVE = 8;
+NET "vs" DRIVE = 12;
 NET "vs" SLEW = FAST;
 
 

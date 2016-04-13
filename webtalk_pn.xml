@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Mon Apr 11 17:01:57 2016">
+<application name="pn" timeStamp="Tue Apr 12 17:38:35 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="22BF3CFBF4C9423DA7DAD05CFC43ED28" type="project"/>
-<property name="ProjectIteration" value="12" type="project"/>
+<property name="ProjectIteration" value="15" type="project"/>
 <property name="ProjectFile" value="C:/Users/ladyo/Documents/Xilinx/myVGA_/myVGA_.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-04-11T11:28:15" type="project"/>
 </section>
@@ -24,7 +24,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-04-11T11:28:15" type="design"/>
 <property name="PROP_intWbtProjectID" value="22BF3CFBF4C9423DA7DAD05CFC43ED28" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="12" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="15" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
